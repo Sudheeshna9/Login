@@ -13,7 +13,7 @@
         
         <div class="signup-container">
             <!-- Logo -->
-            <img src="mylogo.jpg" alt="Logo" class="logo">
+            <img src="logo.png" alt="Logo" class="logo">
             
             <div class="signup-form">
                 <h1>Sign Up</h1>
@@ -27,11 +27,18 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    <div class="input-group password-container">
                         <label for="password">Password</label>
-                        <div class="password-container">
-                            <input type="password" id="password" name="password" required>
-                            <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
-                        </div>
+                        <input type="password" id="password" name="password" required>
+                        <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
+                    </div>
+                    <div class="input-group password-container">
+                        <label for="retype-password">Retype Password</label>
+                        <input type="password" id="retype-password" name="retype-password" required>
+                        <span class="toggle-password" onclick="togglePassword('retype-password')">&#128065;</span>
                     </div>
                     <button type="submit" class="btn">Sign Up</button>
                     <p class="signup-link">Already have an account? <a href="login.html">Login</a></p>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: #001833; /* Light blue background */
+    background: #d9e7ff; /* Light blue background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,12 +77,12 @@ h1 {
 }
 
 .password-container .toggle-password:hover {
-    color: #001833;
+    color: #2575fc;
 }
 
 .btn {
     width: 100%;
-    background: #001833; /* Blue button */
+    background: #2575fc; /* Blue button */
     color: white;
     padding: 10px;
     border: none;
@@ -92,20 +92,20 @@ h1 {
 }
 
 .btn:hover {
-    background: #001833;
+    background: #1e5dbc;
 }
 
 .signup-link,
 .forgot-password {
     text-align: center;
     margin-top: 10px;
-    color: #001833;
+    color: #2575fc;
 }
 
 .signup-link a,
 .forgot-password a {
     text-decoration: none;
-    color: #001833;
+    color: #2575fc;
 }
 
 .signup-link a:hover,
@@ -117,7 +117,7 @@ h1 {
 .logo {
     display: block;
     margin: 0 auto 20px;
-    width: 150px; /* Adjust logo size */
+    width: 80px; /* Adjust logo size */
     height: auto;
     opacity: 0.9;
 }
