@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #001833; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    color: #333; /* Text color */
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.login-container, .signup-container {
+    background: #fff; /* White container */
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px; /* Uniform height */
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 40px;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.password-container .toggle-password:hover {
+    color: #001833;
+}
+
+.btn {
+    width: 100%;
+    background: #001833; /* Blue button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #001833;
+}
+
+.signup-link,
+.forgot-password {
+    text-align: center;
+    margin-top: 10px;
+    color: #001833;
+}
+
+.signup-link a,
+.forgot-password a {
+    text-decoration: none;
+    color: #001833;
+}
+
+.signup-link a:hover,
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Logo Styles */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px; /* Adjust logo size */
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Watermark Styles */
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('cross-pattern.png') center/cover no-repeat;
+    opacity: 0.1; /* Subtle visibility */
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
