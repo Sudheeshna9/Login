@@ -3,56 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
+    <title>Signup Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main-container">
         <!-- Watermark -->
         <div class="watermark"></div>
-        
+
         <div class="signup-container">
             <!-- Logo -->
-            <img src="mylogo.jpg" alt="Logo" class="logo">
-            
+            <img src="logo.png" alt="Logo" class="logo">
+
             <div class="signup-form">
-                <h1>Sign Up</h1>
-                <form action="#" method="POST">
-                    <div class="input-group">
-                        <label for="username">Full Name</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
+                <h1>Signup</h1>
+                <form id="signupForm" action="#" method="POST">
                     <div class="input-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="input-group">
                         <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
                     </div>
                     <div class="input-group password-container">
-                        <label for="password">Password</label>
+                        <label for="password">New Password</label>
                         <input type="password" id="password" name="password" required>
                         <span class="toggle-password" onclick="togglePassword('password')">&#128065;</span>
                     </div>
                     <div class="input-group password-container">
-                        <label for="retype-password">Retype Password</label>
-                        <input type="password" id="retype-password" name="retype-password" required>
-                        <span class="toggle-password" onclick="togglePassword('retype-password')">&#128065;</span>
+                        <label for="confirmPassword">Retype Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span class="toggle-password" onclick="togglePassword('confirmPassword')">&#128065;</span>
                     </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                    <p class="signup-link">Already have an account? <a href="login.html">Login</a></p>
+                    <div id="passwordError" class="error-message" style="color: red; display: none;">
+                        Passwords do not match!
+                    </div>
+
+                    <button type="submit" class="btn">Signup</button>
                 </form>
+
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
             </div>
         </div>
     </div>
 
     <script>
+        // Toggle Password Visibility
         function togglePassword(id) {
             const passwordInput = document.getElementById(id);
-            const type = passwordInput.type === 'password' ? 'text' : 'password';
-            passwordInput.type = type;
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
         }
+
+        // Form Validation for Password Match
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('passwordError');
+
+            if (password !== confirmPassword) {
+                errorMessage.style.display = 'block';
+                event.preventDefault(); // Prevent form submission
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
